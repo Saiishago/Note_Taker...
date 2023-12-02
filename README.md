@@ -1,1 +1,6 @@
 # Note_Taker...
+This week's challenge is to modify starter code in order to create an Application called Note Taker. This application will be used to write and save notes. The application has a front-end part but it will use an Express.js back-end. It will save and retrieve nate data from a JSON file.
+
+## Links...
+Heroku Deployed link:
+Github Repository link:

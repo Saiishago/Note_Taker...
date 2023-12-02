@@ -1,7 +1,16 @@
 const express = require('express');
-//const fs = require('fs');
 const PORT = process.env.port || 3001;
-const app = express();
-const apiRoutes = require('./Develop/routes/apiRoutes.js');
-const htmlRoutes = require('./Develop/routes/htmlRoutes.js');
+const apiRoutes = require('./routes/apiRoutes.js');
+const htmlRoutes = require('./routes/htmlRoutes.js');
 
+const app = express();
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.static("public"));
+app.use(apiRoutes);
+app.use(htmlRoutes);
+
+app.listen(PORT, () => {
+    console.log(`Server up and running >>>> http://localhost:${PORT}`);
+});
